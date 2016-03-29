@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Photo Library</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="app"></div>  <!--this is where the magic happens -->
+  </div>
+
+  <!-- Libraries -->
+  <script src="lib/underscore-min.js"></script>
+  <script src="lib/jquery-min.js"></script>
+  <script src="lib/backbone-min.js"></script>
+
+  <!-- Models/Collections -->
+  <script src="js/models/WeatherEntry.js"></script>
+  <script src="js/collections/Weather.js"></script>
+
+  <!-- Views -->
+  <script src="js/views/AppView.js"></script>
+  <script src="js/views/TitleView.js"></script>
+  <script src="js/views/InputView.js"></script>
+  <script src="js/views/ListView.js"></script>
+  <script src="js/views/EntryView.js"></script>
+
+  <!-- Launch App -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
+
+<!--templated from Danny Delott's 'How's the Weather' which can be found at https://github.com/DannyDelott/HowsTheWeather -->
