@@ -12,11 +12,7 @@ var ImagesCollection = Backbone.Collection.extend({
 
   initialize: function() {
     for (var i = 0; i < images.length; i++) {
-      this.add({
-        title: image.title,
-        src: imagePath+'/'+image.fileName,
-        index: i,
-      });
+      this.addImage(images[i]);
     }
   },
 
@@ -24,7 +20,6 @@ var ImagesCollection = Backbone.Collection.extend({
     this.add({
       title: image.title,
       src: imagePath+'/'+image.fileName,
-      index: i,
     });
   },
   // selectImage: function(e) {

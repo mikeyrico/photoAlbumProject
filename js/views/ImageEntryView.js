@@ -22,8 +22,8 @@ var ImageEntryView = Backbone.View.extend({
   },
 
   clickAction: function(e) {
-    var target = e.target.getAttr('data-path');
-    this.trigger(); // a change of state on photo // TO DO
+    var path = e.target.getAttr('data-path');
+    this.trigger('selectImage', path); // a change of state on photo // TO DO
   },
 
 });
