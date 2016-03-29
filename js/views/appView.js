@@ -9,7 +9,8 @@ var AppView = Backbone.View.extend({
       collection: this.collection
     });
 
-    this.photo = new PhotoView();
+    this.photo = new PhotoView(
+      model: new);
 
     this.render();
   },
@@ -17,8 +18,8 @@ var AppView = Backbone.View.extend({
   render: function() {
     this.$el.append([
       this.title.$el,
-      this.input.$el,
-      this.list.$el
+      this.images.$el,
+      this.photo.$el
       ]);
 
     return this;

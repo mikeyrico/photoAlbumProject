@@ -6,21 +6,22 @@ var paths = {
 };
 
 
+exports.paths = paths;
 
-module.exports.getImageNames = getImageNames = function () {
+exports.getImageNames = getImageNames = function () {
   fs.readdir(paths.images, function(err, fileNames) {
     if (err) {
       console.error('error in collecting imageNames:', err);
     }
-    console.log(fileNames);
+    // console.log(fileNames);
     return fileNames.map(function(fileName) {
       var title = fileName.replace(/[-]/g, ' ').slice(0, fileName.length - 4);
-      console.log(title, fileName);
+      // console.log(title, fileName);
       return {title: title, fileName: fileName};
     });
   });
 };
 
-console.log(getImageNames());
+// console.log(getImageNames());
 
 
