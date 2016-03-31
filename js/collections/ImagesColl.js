@@ -22,9 +22,6 @@ var ImagesCollection = Backbone.Collection.extend({
       src: imagePath+'/'+image.fileName,
     });
   },
-  // selectImage: function(e) {
-  //   var ta
 
-  // },
 
 });

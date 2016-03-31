@@ -14,7 +14,9 @@ var PhotoView = Backbone.View.extend({
       src: this.model.get('current'),
       // title: this.modle.get('currentTitle')
     });
-    this.$el.html(photo);
+    this.$el
+      .addClass('photo')
+      .html(photo);
   },
 });
 

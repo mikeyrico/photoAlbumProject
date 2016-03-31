@@ -5,8 +5,8 @@ var AppView = Backbone.View.extend({
   initialize: function() {
     this.title = new TitleView();
 
-    this.images = new ImagesView({
-      collection: this.collection
+    this.images = new ImageListView({
+      collection: new ImagesCollection(
     });
 
     this.photo = new PhotoView(
