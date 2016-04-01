@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>My Photo Library</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Look Here</title>
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
 
 <body>
@@ -14,20 +14,21 @@
   </div>
 
   <!-- Libraries -->
-  <script src="lib/underscore-min.js"></script>
-  <script src="lib/jquery-min.js"></script>
-  <script src="lib/backbone-min.js"></script>
+  <script src="node_modules/underscore/underscore-min.js"></script>
+  <script src="node_modules/jquery/lib/node-jquery.js"></script>
+  <script src="node_modules/backbone/backbone-min.js"></script>
 
   <!-- Models/Collections -->
   <script src="js/models/imageEntry.js"></script>
-  <script src="js/models/PhotoModel.js"></script>
-  <script src="js/collections/imagesColl.js"></script>
+  <script src="js/collections/ImagesColl.js"></script>
+  <script src="js/models/AppModel.js"></script>
 
   <!-- Views -->
-  <script src="js/views/appView.js"></script>
-  <!-- <script src="js/views/TitleView.js"></script> -->
   <script src="js/views/ImageEntryView.js"></script>
+  <script src="js/views/ImageListView.js"></script>
   <script src="js/views/PhotoView.js"></script>
+  <script src="js/views/InputView.js"></script>
+  <script src="js/views/AppView.js"></script>
   <!-- <script src="js/views/EntryView.js"></script> -->
 
   <!-- Launch App -->
@@ -36,4 +37,3 @@
 
 </html>
 
-<!--templated from Danny Delott's 'How's the Weather' which can be found at https://github.com/DannyDelott/HowsTheWeather -->

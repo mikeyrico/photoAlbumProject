@@ -1,18 +1,25 @@
+// var backbone = require('backbone');
+
 var AppView = Backbone.View.extend({
 
   el: '#app',
 
-  initialize: function() {
-    this.title = new TitleView();
+  model: AppModel,
 
-    this.images = new ImageListView({
-      collection: new ImagesCollection(
-    });
+  initialize: function(params) {
+    // this.title = new TitleView();
 
-    this.photo = new PhotoView(
-      model: new);
+    this.inputView = new InputView({model: this});
+    console.log(AppView);
+
+    this.imageList = new ImageListView();
+
+    this.photo = new PhotoView();
+      // model: this.model.get('currentImage'));
 
     this.render();
+
+    // LISTEN to change on the model (APP model), and trigger change on
   },
 
   render: function() {
@@ -21,7 +28,6 @@ var AppView = Backbone.View.extend({
       this.images.$el,
       this.photo.$el
       ]);
-
     return this;
   }
 

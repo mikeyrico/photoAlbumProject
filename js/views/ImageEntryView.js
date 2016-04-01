@@ -2,28 +2,32 @@ var ImageEntryView = Backbone.View.extend({
 
   className: 'imageEntry',
 
-  template: _.template('<p data-path="<%= src =%>" ><%= title =%></p>'),
+  tagName: 'li',
+  // don't appear to need template here
+  // template: _.template(
+  //   `<tr>
+  //     <td><%= title =%></td>
+  //   </tr>`
+  //   ),
 
-  events: {
-    'click': 'clickAction',
-  },
+  // click handler being handled on collection, see click action below
+  // events: {
+  //   'click': 'clickAction',
+  // },
 
   initialize: function() {
     this.render();
   },
 
   render: function() {
-    var imageEntry = this.template({
-      title: this.model.get('title'),
-      src: this.model.get()
-    });
-
-    this.$el.html(entry);
+    $el.text(this.model.get('title'));
+    return this;
   },
 
-  clickAction: function(e) {
-    var path = e.target.getAttr('data-path');
-    this.trigger('selectImage', path); // a change of state on photo // TO DO
-  },
+  // clickAction: function(e) {
+  //   this.trigger('selectImage', this);
+  //   // var path = e.target.getAttr('data-path');
+  //   // this.trigger('selectImage', path); // a change of state on photo // TO DO
+  // },
 
 });

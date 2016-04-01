@@ -1,11 +1,6 @@
-var images = new ImagesCollection({
-  model:
-})
+var images = new ImagesCollection(mockImages);
 
 var app = new AppView({
-  collection: new Image(),
-  defaults: {
-    currentPhoto: null,
-  }
+  model: new AppModel({images: images}),
 });
 
